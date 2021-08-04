@@ -27,7 +27,9 @@ const Home = () => (
           <Heading as="h2" size="md">
             Best Sellers Lists &rarr;
           </Heading>
-          <Text>Explore The New York Times best seller lists.</Text>
+          <Text>
+            Explore The New York Times best seller lists and the related books.
+          </Text>
         </Box>
       </Flex>
     </LinkCard>
