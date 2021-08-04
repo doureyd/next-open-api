@@ -8,7 +8,7 @@ import {
   Flex,
 } from '@chakra-ui/react'
 
-const Card = ({ title, image, imageAlt, link, ratio = 1 }) => (
+const Card = ({ title, image, link, ratio = 1 }) => (
   <LinkBox>
     <GridItem
       shadow="md"
@@ -24,7 +24,7 @@ const Card = ({ title, image, imageAlt, link, ratio = 1 }) => (
         <AspectRatio ratio={ratio}>
           <Image
             src={image}
-            alt={imageAlt}
+            alt={title}
             fallbackSrc="https://via.placeholder.com/200/000/000"
             borderTopRadius="lg"
             objectFit="cover"

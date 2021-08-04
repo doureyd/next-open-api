@@ -1,7 +1,5 @@
 import React from 'react'
-import { ChakraProvider, extendTheme } from '@chakra-ui/react'
-
-const theme = extendTheme({})
+import { ChakraProvider, theme } from '@chakra-ui/react'
 
 const App = ({ Component, pageProps }) => (
   <ChakraProvider theme={theme} resetCSS>

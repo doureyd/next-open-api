@@ -40,7 +40,6 @@ const Podcasts = () => {
           <Card
             title={episode.name}
             image={episode.images[0].url}
-            imageAlt={episode.name}
             link={episode.external_urls.spotify}
             key={episode.id}
           />

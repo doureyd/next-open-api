@@ -1,4 +1,4 @@
-const api_key = process.env.THE_NEW_YORK_TIMES_API_KEY
+const api_key = process.env.NEW_YORK_TIMES_API_KEY
 
 /*
 List Names

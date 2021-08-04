@@ -1,12 +1,14 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "module": "esnext",
     "baseUrl": "./src",
     "paths": {
       "@/components/*": ["components/*"],
       "@/layouts/*": ["layouts/*"],
       "@/libs/*": ["libs/*"],
-      "@/pages/*": ["pages/*"]
+      "@/pages/*": ["pages/*"],
+      "@/*": ["./*"]
     }
   },
   "include": ["src/**/*"],

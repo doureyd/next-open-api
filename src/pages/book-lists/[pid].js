@@ -21,7 +21,6 @@ const BookList = ({ books = [], listName = '' }) => {
           <Card
             title={book.title}
             image={book.book_image}
-            imageAlt={book.title}
             link={book.amazon_product_url}
             ratio={3 / 4}
             key={book.rank}
