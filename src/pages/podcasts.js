@@ -11,7 +11,7 @@ import DefaultLayout from '@/layouts/DefaultLayout'
 const PAGE_SIZE = 16
 
 const Podcasts = () => {
-  const [searchInput, setSearchInput] = useState('Daniel Schmachtenberger')
+  const [searchInput, setSearchInput] = useState('Schmachtenberger')
   const searchQuery = useDebounce(searchInput, 1000)
 
   const handleChange = (e) => setSearchInput(e.target.value)
@@ -31,7 +31,7 @@ const Podcasts = () => {
         mt="8"
         value={searchInput}
         handleChange={handleChange}
-        placeholder="Search Spotify Podcasts..."
+        placeholder="Search Podcasts..."
       />
       {isEmpty ? <p>No podcasts found.</p> : null}
       {error ? <p>Something went wrong.</p> : null}

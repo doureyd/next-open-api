@@ -11,8 +11,8 @@ const SearchInput = ({ value, handleChange, placeholder, ...props }) => (
       value={value}
       onChange={handleChange}
       color="black"
-      border="0px"
-      fontSize="28px"
+      border="0"
+      fontSize={['2xl', null, '3xl']}
       fontFamily="Helvetica Neue"
       fontWeight="bold"
       focusBorderColor="invisible"
