@@ -1,6 +1,6 @@
 import useSwr from 'swr'
 import { useState } from 'react'
-import { SimpleGrid, Heading } from '@chakra-ui/react'
+import { SimpleGrid, Text } from '@chakra-ui/react'
 
 import fetcher from '@/libs/fetcher'
 import useDebounce from '@/libs/useDebounce'
@@ -8,7 +8,7 @@ import SearchInput from '@/components/SearchInput'
 import Card from '@/components/Card'
 import DefaultLayout from '@/layouts/DefaultLayout'
 
-const PAGE_SIZE = 16
+const PAGE_SIZE = 50
 
 const Podcasts = () => {
   const [searchInput, setSearchInput] = useState('Schmachtenberger')
@@ -23,19 +23,19 @@ const Podcasts = () => {
 
   const podcasts = data?.episodes?.items.filter((episode) => episode) || []
 
-  const isEmpty = !isValidating && !!searchQuery && podcasts.length === 0
+  const isEmpty =
+    !isValidating && !!searchQuery && podcasts.length === 0 && !error
 
   return (
     <DefaultLayout>
       <SearchInput
-        mt="8"
         value={searchInput}
         handleChange={handleChange}
         placeholder="Search Podcasts..."
       />
-      {isEmpty ? <p>No podcasts found.</p> : null}
-      {error ? <p>Something went wrong.</p> : null}
-      <SimpleGrid mt="8" columns={[2, null, 4]} spacing="20px">
+      <SimpleGrid columns={[2, null, 4]} spacing="20px" marginY="8">
+        {isEmpty ? <Text>No podcasts found.</Text> : null}
+        {error ? <Text>Something went wrong.</Text> : null}
         {podcasts.map((episode) => (
           <Card
             title={episode.name}

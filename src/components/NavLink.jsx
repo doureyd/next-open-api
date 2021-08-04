@@ -17,6 +17,7 @@ const NavLink = ({ children, href }) => {
         color={router.asPath === href ? 'blue.500' : 'black'}
         mr="4"
         fontWeight="bold"
+        fontSize={['lg', null, 'xl']}
         _hover={{ textDecoration: 'none' }}
       >
         {children}

@@ -10,7 +10,7 @@ const FourOhFour = () => {
         404 - Page Not Found
       </Heading>
       <NextLink href="/">
-        <Button mt="4" leftIcon={<ArrowBackIcon />} variant="outline">
+        <Button mt="8" leftIcon={<ArrowBackIcon />} variant="outline">
           Go back home
         </Button>
       </NextLink>

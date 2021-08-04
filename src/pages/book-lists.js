@@ -6,10 +6,10 @@ import NextLink from 'next/link'
 function BookLists({ listNames = [] }) {
   return (
     <DefaultLayout>
-      <Heading as="h1" size="lg" mb="4">
+      <Heading as="h1" size="lg">
         New York Times — Best Sellers
       </Heading>
-      <UnorderedList>
+      <UnorderedList mt="8">
         {listNames.map((listName) => (
           <ListItem key={listName.list_name_encoded}>
             <NextLink

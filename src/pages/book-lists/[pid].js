@@ -22,13 +22,13 @@ const BookList = () => {
 
   return (
     <DefaultLayout>
-      <Heading as="h1" mb="4" size="lg">
+      <Heading as="h1" size="lg">
         {listName}
       </Heading>
-      <Heading as="h2" color="gray.500" size="md" mb="8">
+      <Heading as="h2" color="gray.500" size="md" mt="4">
         New York Times — Best Sellers
       </Heading>
-      <SimpleGrid columns={[2, null, 4]} spacing="20px" pb="8">
+      <SimpleGrid columns={[2, null, 4]} spacing="20px" marginY="8">
         {isEmpty ? <p>No books found for this list</p> : null}
         {error ? <p>Something went wrong.</p> : null}
         {books.map((book) => (

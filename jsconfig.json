@@ -8,6 +8,7 @@
       "@/layouts/*": ["layouts/*"],
       "@/libs/*": ["libs/*"],
       "@/pages/*": ["pages/*"],
+      "@/styles/*": ["styles/*"],
       "test-utils": ["./test-utils"]
     }
   },

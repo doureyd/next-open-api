@@ -15,7 +15,7 @@ const Home = () => (
           <Heading as="h2" size="md">
             Search Spotify Podcasts &rarr;
           </Heading>
-          <Text>
+          <Text mt="2">
             Explore the huge Spotify podcast database, type some keywords to
             find your next favorite podcast.
           </Text>
@@ -29,7 +29,7 @@ const Home = () => (
           <Heading as="h2" size="md">
             Best Sellers Lists &rarr;
           </Heading>
-          <Text>
+          <Text mt="2">
             Explore The New York Times best seller lists and the related books.
           </Text>
         </Box>

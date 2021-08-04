@@ -13,7 +13,6 @@ const SearchInput = ({ value, handleChange, placeholder, ...props }) => (
       color="black"
       border="0"
       fontSize={['2xl', null, '3xl']}
-      fontFamily="Helvetica Neue"
       fontWeight="bold"
       focusBorderColor="invisible"
       paddingX="0"
