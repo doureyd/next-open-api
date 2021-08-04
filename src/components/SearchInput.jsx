@@ -3,11 +3,9 @@ import { SearchIcon } from '@chakra-ui/icons'
 
 const SearchInput = ({ value, handleChange }) => (
   <InputGroup size="lg" color="transparent">
-    <InputLeftElement
-      height="100%"
-      pointerEvents="none"
-      children={<SearchIcon color="gray.300" />}
-    />
+    <InputLeftElement height="100%" pointerEvents="none">
+      <SearchIcon color="gray.300" />
+    </InputLeftElement>
     <Input
       placeholder="Search..."
       value={value}
