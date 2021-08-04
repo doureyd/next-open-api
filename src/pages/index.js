@@ -5,7 +5,9 @@ import DefaultLayout from '@/layouts/DefaultLayout'
 
 const Home = () => (
   <DefaultLayout>
-    <Heading>Next.js Open API Experiment</Heading>
+    <Heading as="h1" size="lg">
+      Next.js Open API Experiment
+    </Heading>
     <LinkCard href="/podcasts" mt="8">
       <Flex>
         <SpotifyIcon alignSelf="center" boxSize={10} />

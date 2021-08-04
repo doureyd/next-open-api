@@ -1,6 +1,6 @@
 import useSwr from 'swr'
 import { useState } from 'react'
-import { SimpleGrid, GridItem, Heading } from '@chakra-ui/react'
+import { SimpleGrid, Heading } from '@chakra-ui/react'
 
 import fetcher from '@/libs/fetcher'
 import useDebounce from '@/libs/useDebounce'
@@ -27,11 +27,15 @@ const Podcasts = () => {
 
   return (
     <DefaultLayout>
-      <Heading>Podcasts</Heading>
-      <SearchInput value={searchInput} handleChange={handleChange} />
+      <SearchInput
+        mt="8"
+        value={searchInput}
+        handleChange={handleChange}
+        placeholder="Search Spotify Podcasts..."
+      />
       {isEmpty ? <p>No podcasts found.</p> : null}
       {error ? <p>Something went wrong.</p> : null}
-      <SimpleGrid columns={[2, null, 4]} spacing="20px">
+      <SimpleGrid mt="8" columns={[2, null, 4]} spacing="20px">
         {podcasts.map((episode) => (
           <Card
             title={episode.name}

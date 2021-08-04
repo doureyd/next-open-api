@@ -6,7 +6,7 @@ import NextLink from 'next/link'
 function BookLists({ listNames = [] }) {
   return (
     <DefaultLayout>
-      <Heading as="h1" mb="4">
+      <Heading as="h1" size="lg" mb="4">
         New York Times — Best Sellers
       </Heading>
       <UnorderedList>

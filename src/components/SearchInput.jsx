@@ -1,18 +1,17 @@
 import { Input, InputGroup, InputLeftElement } from '@chakra-ui/react'
 import { SearchIcon } from '@chakra-ui/icons'
 
-const SearchInput = ({ value, handleChange }) => (
-  <InputGroup size="lg" color="transparent">
+const SearchInput = ({ value, handleChange, placeholder, ...props }) => (
+  <InputGroup {...props} size="lg" color="transparent">
     <InputLeftElement height="100%" pointerEvents="none">
       <SearchIcon color="gray.300" />
     </InputLeftElement>
     <Input
-      placeholder="Search..."
+      placeholder={placeholder}
       value={value}
       onChange={handleChange}
       color="black"
       border="0px"
-      h="90"
       fontSize="28px"
       fontFamily="Helvetica Neue"
       fontWeight="bold"
