@@ -1,5 +1,5 @@
 import Card from '@/components/Card'
-import { render } from '@/jest.setup'
+import { render } from 'test-utils'
 
 describe('Card', () => {
   let props

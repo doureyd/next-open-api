@@ -8,7 +8,7 @@
       "@/layouts/*": ["layouts/*"],
       "@/libs/*": ["libs/*"],
       "@/pages/*": ["pages/*"],
-      "@/*": ["./*"]
+      "test-utils": ["./test-utils"]
     }
   },
   "include": ["src/**/*"],

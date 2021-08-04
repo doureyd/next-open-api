@@ -4,7 +4,7 @@ import { SearchIcon } from '@chakra-ui/icons'
 const SearchInput = ({ value, handleChange, placeholder, ...props }) => (
   <InputGroup {...props} size="lg" color="transparent">
     <InputLeftElement height="100%" pointerEvents="none">
-      <SearchIcon color="gray.300" />
+      <SearchIcon color="gray.500" />
     </InputLeftElement>
     <Input
       placeholder={placeholder}

@@ -19,6 +19,5 @@ const SRC_PATH = '<rootDir>/src'
 module.exports = {
   roots: [SRC_PATH],
   moduleNameMapper: makeModuleNameMapper(SRC_PATH, JS_CONFIG_PATH),
-  setupFilesAfterEnv: ['./jest.config.js'],
   testEnvironment: 'jsdom',
 }
