@@ -1,7 +1,10 @@
+import DefaultLayout from '@/layouts/DefaultLayout'
+import { Heading } from '@chakra-ui/react'
+
 const BookLists = () => (
-  <div>
-    <h1>Book Lists</h1>
-  </div>
+  <DefaultLayout>
+    <Heading>Book Lists</Heading>
+  </DefaultLayout>
 )
 
 export default BookLists

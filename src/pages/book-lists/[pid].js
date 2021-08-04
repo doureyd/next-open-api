@@ -1,3 +1,5 @@
+import DefaultLayout from '@/layouts/DefaultLayout'
+import { Heading } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
 
 const BookList = () => {
@@ -5,9 +7,9 @@ const BookList = () => {
   const { pid } = router.query
 
   return (
-    <div>
-      <h1>Book List: {pid}</h1>
-    </div>
+    <DefaultLayout>
+      <Heading>Book List — {pid}</Heading>
+    </DefaultLayout>
   )
 }
 

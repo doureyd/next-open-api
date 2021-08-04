@@ -1,7 +1,10 @@
+import DefaultLayout from '@/layouts/DefaultLayout'
+import { Heading } from '@chakra-ui/react'
+
 const Podcasts = () => (
-  <div>
-    <h1>Podcasts</h1>
-  </div>
+  <DefaultLayout>
+    <Heading>Podcasts</Heading>
+  </DefaultLayout>
 )
 
 export default Podcasts

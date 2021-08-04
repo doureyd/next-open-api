@@ -1,7 +1,10 @@
+import DefaultLayout from '@/layouts/DefaultLayout'
+import { Heading } from '@chakra-ui/react'
+
 const Home = () => (
-  <div>
-    <h1>Home</h1>
-  </div>
+  <DefaultLayout>
+    <Heading>Home</Heading>
+  </DefaultLayout>
 )
 
 export default Home
