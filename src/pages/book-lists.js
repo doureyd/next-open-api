@@ -27,7 +27,9 @@ function BookLists({ listNames = [] }) {
 
 // This function gets called at build time
 export async function getStaticProps() {
-  const { listNames } = await getListNames()
+  const response = await getListNames()
+
+  const listNames = response?.results || []
 
   return {
     props: {

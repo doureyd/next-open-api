@@ -11,11 +11,7 @@ const getListNames = async () => {
     `https://api.nytimes.com/svc/books/v3/lists/names.json?api-key=${api_key}`
   ).then((res) => res.json())
 
-  const listNames = response?.results || []
-
-  return {
-    listNames,
-  }
+  return response
 }
 
 /*
@@ -28,13 +24,7 @@ const getListData = async (pid) => {
     `https://api.nytimes.com/svc/books/v3/lists/current/${pid}.json?api-key=${api_key}`
   ).then((res) => res.json())
 
-  const books = response?.results?.books.filter((book) => book) || []
-  const listName = response?.results?.display_name || ''
-
-  return {
-    books,
-    listName,
-  }
+  return response
 }
 
 export { getListNames, getListData }
