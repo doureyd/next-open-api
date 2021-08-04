@@ -15,9 +15,9 @@ const getAccessToken = async () => {
       'Content-Type': 'application/x-www-form-urlencoded',
     },
     body: params,
-  })
+  }).then((res) => res.json())
 
-  return response.json()
+  return response
 }
 
 export const searchPodcasts = async (query) => {
@@ -28,9 +28,14 @@ export const searchPodcasts = async (query) => {
     ...query,
   })
 
-  return fetch(`https://api.spotify.com/v1/search?${params.toString()}`, {
-    headers: {
-      Authorization: `Bearer ${access_token}`,
-    },
-  })
+  const response = fetch(
+    `https://api.spotify.com/v1/search?${params.toString()}`,
+    {
+      headers: {
+        Authorization: `Bearer ${access_token}`,
+      },
+    }
+  ).then((res) => res.json())
+
+  return response
 }
