@@ -15,7 +15,7 @@ const BookList = () => {
     fetcher
   )
 
-  const books = data?.results?.books.filter((book) => book) || []
+  const books = data?.results?.books?.filter((book) => book) || []
   const listName = data?.results?.display_name || ''
 
   const isEmpty = !isValidating && books.length === 0
