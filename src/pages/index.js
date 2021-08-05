@@ -12,7 +12,7 @@ const Home = () => (
       <Flex>
         <SpotifyIcon alignSelf="center" boxSize={10} />
         <Box ml="3">
-          <Heading as="h2" size="md">
+          <Heading as="h2" size="sm">
             Search Spotify Podcasts &rarr;
           </Heading>
           <Text mt="2">
@@ -26,7 +26,7 @@ const Home = () => (
       <Flex>
         <NewYorkTimesIcon alignSelf="center" boxSize={10} />
         <Box ml="3">
-          <Heading as="h2" size="md">
+          <Heading as="h2" size="sm">
             Best Sellers Lists &rarr;
           </Heading>
           <Text mt="2">

@@ -6,6 +6,9 @@ import Card from '@/components/Card'
 import DefaultLayout from '@/layouts/DefaultLayout'
 import fetcher from '@/libs/fetcher'
 
+const capitalizeFirstLetter = (string) =>
+  string.charAt(0).toUpperCase() + string.slice(1).toLowerCase()
+
 const BookList = () => {
   const router = useRouter()
   const { pid } = router.query
@@ -33,7 +36,7 @@ const BookList = () => {
         {error ? <p>Something went wrong.</p> : null}
         {books.map((book) => (
           <Card
-            title={book.title}
+            title={capitalizeFirstLetter(book.title)}
             image={book.book_image}
             link={book.amazon_product_url}
             ratio={3 / 4}
