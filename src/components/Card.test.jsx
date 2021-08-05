@@ -7,13 +7,12 @@ describe('Card', () => {
   beforeEach(() => {
     props = {
       title: 'Title',
-      image: 'https://via.placeholder.com/200/fff/fff',
-      link: 'https://googel.com',
-      ratio: 1,
+      image: 'image_url',
+      link: 'card_link',
     }
   })
 
-  test('should render props properly', () => {
+  test('should render title and image', () => {
     const { getByText, getByAltText } = render(<Card {...props} />)
     const title = getByText(props.title)
     const image = getByAltText(props.title)
