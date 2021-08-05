@@ -39,8 +39,8 @@ const Podcasts = () => {
         {podcasts.map((episode) => (
           <Card
             title={episode.name}
-            image={episode.images[0].url}
-            link={episode.external_urls.spotify}
+            imageSrc={episode.images[0].url}
+            linkHref={episode.external_urls.spotify}
             key={episode.id}
           />
         ))}

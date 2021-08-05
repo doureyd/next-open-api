@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar matches snapshot 1`] = `
+<DocumentFragment>
+  <nav
+    class="css-1xqcw9r"
+  >
+    <a
+      class="chakra-link css-1015fv"
+      href="/"
+    >
+      Home
+    </a>
+    <a
+      class="chakra-link css-12y3vhu"
+      href="/podcasts"
+    >
+      Podcasts
+    </a>
+    <a
+      class="chakra-link css-12y3vhu"
+      href="/book-lists"
+    >
+      Book Lists
+    </a>
+  </nav>
+</DocumentFragment>
+`;

@@ -37,8 +37,8 @@ const BookList = () => {
         {books.map((book) => (
           <Card
             title={capitalizeFirstLetter(book.title)}
-            image={book.book_image}
-            link={book.amazon_product_url}
+            imageSrc={book.book_image}
+            linkHref={book.amazon_product_url}
             ratio={3 / 4}
             key={book.rank}
           />

@@ -1,5 +1,5 @@
+import { render, screen } from 'test-utils'
 import Card from '@/components/Card'
-import { render } from 'test-utils'
 
 describe('Card', () => {
   let props
@@ -7,17 +7,21 @@ describe('Card', () => {
   beforeEach(() => {
     props = {
       title: 'Title',
-      image: 'image_url',
-      link: 'card_link',
+      imageSrc: '/image_src',
+      linkHref: '/link_href',
+      imageFallback: '/image_faalback',
     }
   })
 
-  test('should render title and image', () => {
+  it('should render title, image and link', () => {
     const { getByText, getByAltText } = render(<Card {...props} />)
     const title = getByText(props.title)
     const image = getByAltText(props.title)
+    const link = screen.getByRole('link')
 
     expect(title).toBeVisible()
     expect(image).toBeVisible()
+    expect(image).toHaveAttribute('src', props.imageFallback)
+    expect(link).toHaveAttribute('href', props.linkHref)
   })
 })

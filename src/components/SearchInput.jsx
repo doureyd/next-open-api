@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { Input, InputGroup, InputLeftElement } from '@chakra-ui/react'
 import { SearchIcon } from '@chakra-ui/icons'
 
@@ -20,5 +21,15 @@ const SearchInput = ({ value, handleChange, placeholder, ...props }) => (
     />
   </InputGroup>
 )
+
+SearchInput.propTypes = {
+  value: PropTypes.string.isRequired,
+  handleChange: PropTypes.func.isRequired,
+  placeholder: PropTypes.string,
+}
+
+SearchInput.defaultProps = {
+  placeholder: 'Search...',
+}
 
 export default SearchInput

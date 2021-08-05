@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import {
   GridItem,
   LinkBox,
@@ -8,7 +9,7 @@ import {
   Flex,
 } from '@chakra-ui/react'
 
-const Card = ({ title, image, link, ratio = 1 }) => (
+const Card = ({ title, imageSrc, linkHref, ratio, imageFallback }) => (
   <LinkBox>
     <GridItem
       shadow="md"
@@ -20,12 +21,12 @@ const Card = ({ title, image, link, ratio = 1 }) => (
         top: '-4px',
       }}
     >
-      <LinkOverlay href={link} isExternal>
+      <LinkOverlay href={linkHref} isExternal>
         <AspectRatio ratio={ratio}>
           <Image
-            src={image}
+            src={imageSrc}
             alt={title}
-            fallbackSrc="https://via.placeholder.com/200/000/000"
+            fallbackSrc={imageFallback}
             borderTopRadius="lg"
             objectFit="cover"
           />
@@ -43,5 +44,18 @@ const Card = ({ title, image, link, ratio = 1 }) => (
     </GridItem>
   </LinkBox>
 )
+
+Card.propTypes = {
+  title: PropTypes.string.isRequired,
+  imageSrc: PropTypes.string.isRequired,
+  linkHref: PropTypes.string.isRequired,
+  ratio: PropTypes.number,
+  imageFallback: PropTypes.string,
+}
+
+Card.defaultProps = {
+  imageFallback: 'https://via.placeholder.com/200/000/000',
+  ratio: 1,
+}
 
 export default Card
